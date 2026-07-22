@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Selo parceiro">
+<defs>
+<linearGradient id="s" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0%" stop-color="#f1d77a"/><stop offset="100%" stop-color="#c58b3d"/>
+</linearGradient>
+</defs>
+<g fill="none" stroke="url(#s)" stroke-width="2">
+<path d="M100 12 L172 44 L172 108 Q172 158 100 190 Q28 158 28 108 L28 44 Z" opacity="0.85"/>
+<path d="M100 26 L158 52 L158 106 Q158 148 100 174 Q42 148 42 106 L42 52 Z" opacity="0.4"/>
+<path d="M 62 148 L 62 100.2 Q 62 76.2 82.9 68.9 Q 100 74.4 100 56 Q 100 74.4 117.1 68.9 Q 138 76.2 138 100.2 L 138 148 Z" stroke="#009b63" opacity="0.9"/>
+<path d="M 75 148 L 75 114.7 Q 75 98.1 88.8 93 Q 100 96.8 100 84 Q 100 96.8 111.3 93 Q 125 98.1 125 114.7 L 125 148 Z" opacity="0.7"/>
+<path d="M62 158 H138" opacity="0.6"/>
+</g>
+<circle cx="100" cy="96" r="5" fill="url(#s)"/>
+<path d="M100 42 L107 54 L100 66 L93 54 Z" fill="url(#s)" opacity="0.9"/>
+</svg>

@@ -1,0 +1,39 @@
+{
+  "name": "al-thamaniya",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "description": "ARABIA GANG — apresentacao dos oito integrantes, com tela de acesso, painel de edicao e API propria.",
+  "scripts": {
+    "dev": "concurrently -n api,web -c green,yellow \"npm:server\" \"npm:web\"",
+    "web": "vite",
+    "server": "node server/index.js --port 3001",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node server/index.js",
+    "deploy": "npm run build && node server/index.js",
+    "assets": "node scripts/generate-assets.mjs",
+    "export": "node scripts/export-content.mjs",
+    "optimize": "node scripts/optimize-media.mjs"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "framer-motion": "^11.11.17",
+    "lucide-react": "^0.462.0",
+    "multer": "^2.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.3",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "vite": "^5.4.11"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}

@@ -1,0 +1,700 @@
+{
+  "exportedAt": "2026-07-22T10:47:43.205Z",
+  "site": {
+    "brand": {
+      "logoHeight": 96,
+      "logo": "/images/uploads/1784630527636-fde3ebd7-web.webp",
+      "name": "ARABIA GANG",
+      "arabicName": "أرابيا",
+      "tagline": {
+        "pt": "",
+        "en": "The Council of Eight",
+        "ar": "عصابة أرابيا"
+      }
+    },
+    "access": {
+      "music": "https://www.youtube.com/watch?v=8uP1k_r_M60",
+      "transitionLogo": "",
+      "background": "/images/ai/access.webp",
+      "logoPrimary": "/images/uploads/1784628210552-0b4b15e3-web.webp",
+      "logoPrimaryAlt": {
+        "pt": "Emblema do conselho ARABIA GANG",
+        "en": "ARABIA GANG council emblem",
+        "ar": "شعار عصابة أرابيا"
+      },
+      "logoSecondary": "/images/uploads/1784628448118-0be82d05-web.webp",
+      "logoSecondaryAlt": {
+        "pt": "Selo da casa parceira",
+        "en": "Partner house seal",
+        "ar": "ختم الدار الشريكة"
+      },
+      "arabic": "عصابة أرابيا",
+      "headline": {
+        "pt": "Oito nomes. Uma única visão.",
+        "en": "Eight names. One single vision.",
+        "ar": "ثمانية أسماء. رؤية واحدة."
+      },
+      "subline": {
+        "pt": "O deserto testa os fracos. A Arábia forja os fortes.",
+        "en": "You are at the gate of the council. Step through.",
+        "ar": "أنت عند باب المجلس. تفضّل بالدخول."
+      },
+      "buttonLabel": {
+        "pt": "Acessar",
+        "en": "Enter",
+        "ar": "دخول"
+      }
+    },
+    "hero": {
+      "background": "/images/ai/hero.webp",
+      "arabic": "ثمانية أسماء . رؤية واحدة",
+      "badge": {
+        "pt": "METROPOLE RP",
+        "en": "Riyadh · Jeddah · NEOM",
+        "ar": "الرياض · جدة · نيوم"
+      },
+      "titleTop": {
+        "pt": "Os Oito",
+        "en": "The Eight",
+        "ar": "الثمانية"
+      },
+      "titleBottom": {
+        "pt": "que atravessam o deserto",
+        "en": "who cross the desert",
+        "ar": "الذين يعبرون الصحراء"
+      },
+      "subtitle": {
+        "pt": "Misterios onde cada um conta sua historia!",
+        "en": "Eight paths shaped between desert tradition and the engineering of the future. One vision, built on discipline, honour and purpose.",
+        "ar": "ثمانية مسارات تشكّلت بين تقاليد الصحراء وهندسة المستقبل. رؤية واحدة بُنيت على الانضباط والشرف والهدف."
+      },
+      "primaryCta": {
+        "pt": "Conheça os integrantes",
+        "en": "Meet the members",
+        "ar": "تعرّف على الأعضاء"
+      },
+      "secondaryCta": {
+        "pt": "Assistir ao vídeo",
+        "en": "Watch the film",
+        "ar": "شاهد الفيلم"
+      },
+      "stats": [
+        {
+          "id": "members",
+          "value": "08",
+          "label": {
+            "pt": "Integrantes",
+            "en": "Members",
+            "ar": "أعضاء"
+          }
+        }
+      ]
+    },
+    "membersSection": {
+      "eyebrow": {
+        "pt": "Arabia X NoCry",
+        "en": "The council",
+        "ar": "المجلس"
+      },
+      "title": {
+        "pt": "Os Oito",
+        "en": "The Eight",
+        "ar": "الثمانية"
+      },
+      "arabic": "الثمانية",
+      "subtitle": {
+        "pt": "Cada integrante carrega uma herança, uma disciplina e um território conquistado. Juntos, formam a estrutura completa.",
+        "en": "Each member carries a heritage, a discipline and a territory of their own. Together they form the complete structure.",
+        "ar": "كل عضو يحمل إرثًا وانضباطًا وميدانًا خاصًا به. ومعًا يشكّلون البنية الكاملة."
+      }
+    },
+    "footer": {
+      "description": {
+        "pt": "\n",
+        "en": "ARABIA GANG is the council of eight members uniting Arabian heritage, discipline and technology into a single trajectory.",
+        "ar": "عصابة أرابيا يجمع الإرث العربي والانضباط والتقنية في مسار واحد."
+      },
+      "socialLinks": {
+        "instagram": "https://www.instagram.com/",
+        "youtube": "https://www.youtube.com/",
+        "linkedin": "https://www.linkedin.com/",
+        "x": "https://x.com/"
+      }
+    }
+  },
+  "members": [
+    {
+      "id": 1,
+      "number": "01",
+      "name": "JotaV",
+      "arabicName": "جوتا ڤ",
+      "role": {
+        "pt": "PVP",
+        "en": "Leader and Strategist",
+        "ar": "القائد وصانع الاستراتيجية"
+      },
+      "location": {
+        "pt": "Metropole RP",
+        "en": "Riyadh, Saudi Arabia",
+        "ar": "الرياض، المملكة العربية السعودية"
+      },
+      "portrait": "/images/uploads/1784629139603-76322038-web.webp",
+      "backgroundImage": "/images/ai/backdrop-01.webp",
+      "shortDescription": {
+        "pt": "",
+        "en": "Known for reading the field and staying calm under pressure. He has led the council since the first meeting in Riyadh.",
+        "ar": "يُعرف بقراءته للميدان وهدوئه تحت الضغط. يقود المجلس منذ أول لقاء في الرياض."
+      },
+      "biography": {
+        "pt": "",
+        "en": "Faisal began as an analyst in a small office in Al-Malaz, where he learned that a decision without context is just noise. In eight years he moved from observer to the architect of strategies adopted by teams across three continents. His approach joins the mathematical rigour of his engineering training with the patience of traditional Gulf negotiation. Within the council, he is the one who turns ambition into an executable plan.",
+        "ar": "بدأ فيصل محللًا في مكتب صغير بحي الملز، حيث تعلّم أن القرار بلا سياق مجرد ضجيج. خلال ثماني سنوات انتقل من مراقب إلى مهندس استراتيجيات تعتمدها فرق في ثلاث قارات. يجمع أسلوبه بين صرامة الهندسة وصبر التفاوض الخليجي التقليدي. وفي المجلس، هو من يحوّل الطموح إلى خطة قابلة للتنفيذ."
+      },
+      "previousPlaces": [],
+      "timeline": [],
+      "achievements": {
+        "pt": [],
+        "en": [
+          "Strategist of the year in the national circuit (2023)",
+          "Behind three consecutive titles in regional competitions",
+          "Author of the decision manual adopted by twelve teams"
+        ],
+        "ar": [
+          "استراتيجي العام في الدوري الوطني (2023)",
+          "وراء ثلاثة ألقاب متتالية في المسابقات الإقليمية",
+          "مؤلف دليل القرار الذي اعتمدته اثنتا عشرة فرقة"
+        ]
+      },
+      "videoType": "x",
+      "videoUrl": "https://x.com/JvFb_x/status/2011867983958724612?s=20",
+      "videoThumbnail": "/images/member-01-video.svg",
+      "videoTitle": {
+        "pt": "",
+        "en": "The weight of the first decision",
+        "ar": "ثقل القرار الأول"
+      },
+      "videoDescription": {
+        "pt": "",
+        "en": "A forty-minute portrait condensed into five: how authority is built without raising your voice.",
+        "ar": "بورتريه من أربعين دقيقة اختُصر في خمس: كيف تُبنى السلطة دون رفع الصوت."
+      },
+      "gallery": [],
+      "socialLinks": {
+        "instagram": "",
+        "youtube": "",
+        "linkedin": "",
+        "x": "https://x.com/"
+      },
+      "position": 1
+    },
+    {
+      "id": 2,
+      "number": "02",
+      "name": "Theus",
+      "arabicName": "ثيوس",
+      "role": {
+        "pt": "PVP",
+        "en": "Creative Direction and Identity",
+        "ar": "الإدارة الإبداعية والهوية"
+      },
+      "location": {
+        "pt": "Metropole RP",
+        "en": "Jeddah, Saudi Arabia",
+        "ar": "جدة، السعودية"
+      },
+      "portrait": "/images/uploads/1784629010775-d0ae1f0d-web.webp",
+      "backgroundImage": "/images/ai/backdrop-02.webp",
+      "shortDescription": {
+        "pt": "",
+        "en": "Translates Arabian visual heritage into contemporary language. Every council project passes through her eye.",
+        "ar": "تترجم الإرث البصري العربي إلى لغة معاصرة. كل مشروع في المجلس يمرّ على عينها."
+      },
+      "biography": {
+        "pt": "Nour cresceu entre as fachadas de coral da Al-Balad, em Jeddah, e passou a adolescência desenhando as gelosias de madeira que hoje reaparecem em seus projetos digitais. Formada em design e restauração, recusa a nostalgia: para ela, tradição só sobrevive quando é reinterpretada. Comanda a identidade do conselho, do tipo de ouro usado nos títulos ao ritmo de cada filme.",
+        "en": "Nour grew up among the coral façades of Al-Balad in Jeddah, and spent her teenage years drawing the wooden latticework that now reappears in her digital work. Trained in design and restoration, she refuses nostalgia: for her, tradition only survives when it is reinterpreted. She leads the council identity, from the shade of gold used in titles to the rhythm of each film.",
+        "ar": "نشأت نور بين واجهات المرجان في البلد بجدة، وقضت مراهقتها ترسم الروشان الخشبي الذي يظهر اليوم في أعمالها الرقمية. درست التصميم والترميم، وترفض الحنين: فالتقليد عندها لا يبقى إلا حين يُعاد تفسيره. تقود هوية المجلس، من درجة الذهب في العناوين إلى إيقاع كل فيلم."
+      },
+      "previousPlaces": [],
+      "timeline": [],
+      "achievements": {
+        "pt": [],
+        "en": [
+          "Regional art direction award (2023)",
+          "Visual system licensed to four cultural institutions",
+          "Guest curator at the Riyadh Design Biennale"
+        ],
+        "ar": [
+          "جائزة الإدارة الفنية الإقليمية (2023)",
+          "نظام بصري مرخّص لأربع مؤسسات ثقافية",
+          "قيّمة ضيفة في بينالي الرياض للتصميم"
+        ]
+      },
+      "videoType": "x",
+      "videoUrl": "https://x.com/theusnss_/status/2077869193580449945?s=20",
+      "videoThumbnail": "/images/member-02-video.svg",
+      "videoTitle": {
+        "pt": "",
+        "en": "The geometry that never ages",
+        "ar": "الهندسة التي لا تشيخ"
+      },
+      "videoDescription": {
+        "pt": "",
+        "en": "From a wooden lattice to an interface: the journey of an eight-point pattern.",
+        "ar": "من روشان خشبي إلى واجهة رقمية: رحلة نجمة ثمانية."
+      },
+      "gallery": [
+        "/images/member-02-gallery-01.svg",
+        "/images/member-02-gallery-02.svg",
+        "/images/member-02-gallery-03.svg"
+      ],
+      "socialLinks": {
+        "instagram": "https://www.instagram.com/",
+        "youtube": "",
+        "linkedin": "https://www.linkedin.com/",
+        "x": "https://x.com/"
+      },
+      "position": 2
+    },
+    {
+      "id": 3,
+      "number": "03",
+      "name": "Mat",
+      "arabicName": "مات",
+      "role": {
+        "pt": "Gestao",
+        "en": "Analysis and Data Intelligence",
+        "ar": "التحليل وذكاء البيانات"
+      },
+      "location": {
+        "pt": "Metropole RP",
+        "en": "Dammam, Saudi Arabia",
+        "ar": "الدمام، السعودية"
+      },
+      "portrait": "/images/uploads/1784674640660-c2133ba8-web.webp",
+      "backgroundImage": "/images/ai/backdrop-01.webp",
+      "shortDescription": {
+        "pt": "",
+        "en": "The quiet one. He speaks little, yet no major decision is taken without his numbers.",
+        "ar": "صوت المجلس الهادئ. يتكلم قليلًا، لكن لا قرار كبير يُتخذ دون أرقامه."
+      },
+      "biography": {
+        "pt": "",
+        "en": "Khalid comes from Dammam, where industry teaches early that one ignored variable is expensive. He studied statistics and spent six years building forecasting models before accepting any public role. He is obsessed with honest data and distrusts any chart that looks too beautiful. He is the one who stops a meeting when the narrative starts drifting from the evidence.",
+        "ar": "جاء خالد من الدمام، حيث تعلّم مبكرًا أن متغيّرًا واحدًا مهملًا يكلّف كثيرًا. درس الإحصاء وأمضى ست سنوات في بناء نماذج التنبؤ قبل أن يقبل أي منصب. مهووس بالبيانات الصادقة، ويرتاب في أي رسم بياني جميل أكثر من اللازم. هو من يوقف الاجتماع حين تبتعد الرواية عن الدليل."
+      },
+      "previousPlaces": [],
+      "timeline": [],
+      "achievements": {
+        "pt": [],
+        "en": [
+          "Predictive model with 91% accuracy over three seasons",
+          "Two international scientific citations",
+          "Mentor to nineteen analysts in training"
+        ],
+        "ar": [
+          "نموذج تنبؤي بدقة 91% عبر ثلاثة مواسم",
+          "استشهادان علميان دوليان",
+          "مرشد لتسعة عشر محللًا قيد التدريب"
+        ]
+      },
+      "videoType": "mp4",
+      "videoUrl": "/images/uploads/1784686436606-79194920-web.mp4",
+      "videoThumbnail": "/images/member-03-video.svg",
+      "videoTitle": {
+        "pt": "Tudo o que os números não dizem",
+        "en": "Everything numbers do not say",
+        "ar": "كل ما لا تقوله الأرقام"
+      },
+      "videoDescription": {
+        "pt": "Um analista explica por que confia mais na dúvida do que na certeza.",
+        "en": "An analyst explains why he trusts doubt more than certainty.",
+        "ar": "محلل يشرح لماذا يثق بالشك أكثر من اليقين."
+      },
+      "gallery": [],
+      "socialLinks": {
+        "instagram": "",
+        "youtube": "",
+        "linkedin": "",
+        "x": ""
+      },
+      "position": 3
+    },
+    {
+      "id": 4,
+      "number": "04",
+      "name": "Danike",
+      "arabicName": "دانيك",
+      "role": {
+        "pt": "PVP",
+        "en": "Engineering and Technology",
+        "ar": "الهندسة والتقنية"
+      },
+      "location": {
+        "pt": "Metropole RP",
+        "en": "NEOM, Saudi Arabia",
+        "ar": "نيوم، السعودية"
+      },
+      "portrait": "/images/uploads/1784629245276-1ebfff62-web.webp",
+      "backgroundImage": "/images/ai/backdrop-02.webp",
+      "shortDescription": {
+        "pt": "",
+        "en": "She builds the infrastructure behind everything. If something in the council runs on its own, she designed it.",
+        "ar": "تبني البنية التي تحمل كل شيء. إن عمل شيء في المجلس وحده، فهي من صمّمه."
+      },
+      "biography": {
+        "pt": "",
+        "en": "Layla entered engineering out of stubbornness and stayed out of vocation. She worked on energy systems in the north of the country before moving to NEOM, where she leads the council technical architecture. She argues that technology without maintenance is only a promise, so she documents every decision with the same care she applies to code. Outside work, she restores antique navigation instruments.",
+        "ar": "دخلت ليلى الهندسة عنادًا وبقيت فيها شغفًا. عملت في أنظمة الطاقة شمال البلاد قبل انتقالها إلى نيوم، حيث تقود البنية التقنية للمجلس. ترى أن التقنية بلا صيانة مجرد وعد، لذا توثّق كل قرار بالعناية نفسها التي تكتب بها الكود. وخارج العمل، ترمّم أدوات ملاحة قديمة."
+      },
+      "previousPlaces": [],
+      "timeline": [],
+      "achievements": {
+        "pt": [],
+        "en": [
+          "Passive cooling patent for desert climate",
+          "Internal platform with 99.9% availability",
+          "Technical excellence mention at an international conference"
+        ],
+        "ar": [
+          "براءة اختراع لتبريد سلبي في مناخ الصحراء",
+          "منصة داخلية بجاهزية 99.9%",
+          "تنويه بالتميّز التقني في مؤتمر دولي"
+        ]
+      },
+      "videoType": "x",
+      "videoUrl": "https://x.com/danikefpsss/status/1966507991743529347",
+      "videoThumbnail": "/images/member-04-video.svg",
+      "videoTitle": {
+        "pt": "",
+        "en": "Engineering built to last a century",
+        "ar": "هندسة تدوم مئة عام"
+      },
+      "videoDescription": {
+        "pt": "",
+        "en": "Between solar panels and sand, the routine of someone designing for whoever comes next.",
+        "ar": "بين الألواح الشمسية والرمل، يوميات من تصمّم لمن يأتي بعدها."
+      },
+      "gallery": [],
+      "socialLinks": {
+        "instagram": "",
+        "youtube": "",
+        "linkedin": "",
+        "x": "https://x.com/danikefpsss"
+      },
+      "position": 4
+    },
+    {
+      "id": 5,
+      "number": "05",
+      "name": "Em Breve",
+      "arabicName": "قريبًا جدًا",
+      "role": {
+        "pt": "PVP",
+        "en": "Operations and Logistics",
+        "ar": "العمليات واللوجستيات"
+      },
+      "location": {
+        "pt": "Desconhecido",
+        "en": "AlUla, Saudi Arabia",
+        "ar": "العلا، السعودية"
+      },
+      "portrait": "/images/uploads/1784629999542-5817c13f-web.webp",
+      "backgroundImage": "/images/ai/backdrop-01.webp",
+      "shortDescription": {
+        "pt": "Em Breve!",
+        "en": "The guardian of execution. No council promise becomes real without passing through his hands.",
+        "ar": "حارس التنفيذ. لا وعد من المجلس يتحقق دون أن يمرّ بين يديه."
+      },
+      "biography": {
+        "pt": "",
+        "en": "Tariq was born in AlUla, among sandstone cliffs and caravans that have crossed the valley for centuries. He learned logistics watching his father organise desert expeditions: water, time and trust, in that order. Today he coordinates complex operations with the same logic. He is known for arriving two hours before everyone else and for never having missed a deadline.",
+        "ar": "وُلد طارق في العلا، بين صخور الحجر الرملي وقوافل عبرت الوادي منذ قرون. تعلّم اللوجستيات وهو يراقب والده ينظّم رحلات الصحراء: الماء ثم الوقت ثم الثقة. واليوم ينسّق عمليات معقدة بالمنطق نفسه. يُعرف بوصوله قبل الجميع بساعتين، وبأنه لم يفوّت موعدًا قط."
+      },
+      "previousPlaces": [],
+      "timeline": [],
+      "achievements": {
+        "pt": [],
+        "en": [
+          "No missed deadline in nine years of operation",
+          "Safety protocol adopted by three organisations",
+          "Coordination of an event with twenty thousand attendees"
+        ],
+        "ar": [
+          "لم يفوّت موعدًا خلال تسع سنوات من العمل",
+          "بروتوكول سلامة اعتمدته ثلاث منظمات",
+          "تنسيق فعالية بعشرين ألف مشارك"
+        ]
+      },
+      "videoType": "x",
+      "videoUrl": "",
+      "videoThumbnail": "/images/member-05-video.svg",
+      "videoTitle": {
+        "pt": "",
+        "en": "Water, time and trust",
+        "ar": "الماء والوقت والثقة"
+      },
+      "videoDescription": {
+        "pt": "",
+        "en": "The caravan lesson that became an operating method in three countries.",
+        "ar": "درس القافلة الذي صار منهج عمل في ثلاث دول."
+      },
+      "gallery": [],
+      "socialLinks": {
+        "instagram": "",
+        "youtube": "",
+        "linkedin": "",
+        "x": ""
+      },
+      "position": 5
+    },
+    {
+      "id": 6,
+      "number": "06",
+      "name": "Em Breve",
+      "arabicName": "قريبًا جدًا",
+      "role": {
+        "pt": "PVP",
+        "en": "Global Relations and Diplomacy",
+        "ar": "العلاقات الدولية والدبلوماسية"
+      },
+      "location": {
+        "pt": "Desconhecido",
+        "en": "Riyadh · Dubai",
+        "ar": "الرياض · دبي"
+      },
+      "portrait": "/images/uploads/1784678885768-6eabacc5-web.webp",
+      "backgroundImage": "/images/ai/backdrop-02.webp",
+      "shortDescription": {
+        "pt": "Em Breve!",
+        "en": "The voice of the council beyond the Peninsula. She opens doors that were never on the map.",
+        "ar": "صوت المجلس خارج شبه الجزيرة. تفتح أبوابًا لم تكن على الخريطة."
+      },
+      "biography": {
+        "pt": "",
+        "en": "Salma speaks four languages and listens in all of them. She spent six years between Riyadh and Dubai negotiating cultural agreements before joining the council, bringing with her a network spanning eight time zones. She believes diplomacy is above all memory: remembering the name, the context and the promise made two years ago. She is the one who turns a courtesy meeting into a decade-long partnership.",
+        "ar": "تتحدث سلمى أربع لغات وتصغي بها جميعًا. أمضت ست سنوات بين الرياض ودبي تتفاوض على اتفاقيات ثقافية قبل انضمامها للمجلس، وجلبت معها شبكة تمتد عبر ثماني مناطق زمنية. ترى أن الدبلوماسية ذاكرة قبل كل شيء: تذكّر الاسم والسياق والوعد الذي قُطع قبل عامين. هي من تحوّل لقاء مجاملة إلى شراكة لعقد كامل."
+      },
+      "previousPlaces": [],
+      "timeline": [],
+      "achievements": {
+        "pt": [],
+        "en": [
+          "Seven international agreements negotiated",
+          "Active partnerships across three continents",
+          "Diplomatic recognition for cultural cooperation (2024)"
+        ],
+        "ar": [
+          "سبع اتفاقيات دولية تم التفاوض عليها",
+          "شراكات فاعلة في ثلاث قارات",
+          "تكريم دبلوماسي للتعاون الثقافي (2024)"
+        ]
+      },
+      "videoType": "x",
+      "videoUrl": "",
+      "videoThumbnail": "/images/member-06-video.svg",
+      "videoTitle": {
+        "pt": "",
+        "en": "The art of remembering names",
+        "ar": "فنّ تذكّر الأسماء"
+      },
+      "videoDescription": {
+        "pt": "",
+        "en": "Four languages, eight time zones and one rule: never promise what you cannot sustain.",
+        "ar": "أربع لغات وثماني مناطق زمنية وقاعدة واحدة: لا تعِد بما لا تستطيع حمله."
+      },
+      "gallery": [],
+      "socialLinks": {
+        "instagram": "",
+        "youtube": "",
+        "linkedin": "",
+        "x": ""
+      },
+      "position": 6
+    },
+    {
+      "id": 7,
+      "number": "07",
+      "name": "Em Breve",
+      "arabicName": "قريبًا جدًا",
+      "role": {
+        "pt": "PVP",
+        "en": "Academy and Development",
+        "ar": "الأكاديمية والتطوير"
+      },
+      "location": {
+        "pt": "Desconhecido",
+        "en": "Riyadh, Saudi Arabia",
+        "ar": "الرياض، السعودية"
+      },
+      "portrait": "/images/uploads/1784682517969-b2ba7494-web.webp",
+      "backgroundImage": "/images/ai/backdrop-01.webp",
+      "shortDescription": {
+        "pt": "Em Breve!",
+        "en": "The youngest of the council and the one responsible for whoever comes next. He has trained more people than any other member.",
+        "ar": "أصغر أعضاء المجلس، والمسؤول عمّن يأتي بعده. درّب من الناس أكثر من أي عضو آخر."
+      },
+      "biography": {
+        "pt": "",
+        "en": "Yousef was a student before he was a councillor: he joined the first training programme at nineteen and never left. He studied education and spent four years in courts, laboratories and borrowed rooms, testing how you teach someone to decide under pressure. He argues that talent without structure is lost within two years, so he measures everything he does. He is the living memory of the council method.",
+        "ar": "كان يوسف طالبًا قبل أن يصبح عضوًا في المجلس: التحق بأول برنامج تدريبي في التاسعة عشرة ولم يغادر. درس التربية وأمضى أربع سنوات في الملاعب والمختبرات وقاعات مُستعارة يختبر كيف يُعلَّم المرء أن يقرر تحت الضغط. يرى أن الموهبة بلا بنية تضيع خلال عامين، لذا يقيس كل ما يفعله. وهو الذاكرة الحيّة لمنهج المجلس."
+      },
+      "previousPlaces": [],
+      "timeline": [],
+      "achievements": {
+        "pt": [],
+        "en": [
+          "One hundred and four students trained across four cohorts",
+          "Curriculum adopted by six partner schools",
+          "An 88% retention rate in the training programme"
+        ],
+        "ar": [
+          "مئة وأربعة طلاب تخرّجوا في أربع دفعات",
+          "منهج اعتمدته ست مدارس شريكة",
+          "نسبة استمرار 88% في برنامج التدريب"
+        ]
+      },
+      "videoType": "x",
+      "videoUrl": "",
+      "videoThumbnail": "/images/member-07-video.svg",
+      "videoTitle": {
+        "pt": "",
+        "en": "To teach is to give back",
+        "ar": "أن تُعلّم هو أن تردّ الجميل"
+      },
+      "videoDescription": {
+        "pt": "",
+        "en": "The student who became a councillor returns to the room where it all began.",
+        "ar": "الطالب الذي صار عضوًا يعود إلى القاعة التي بدأ منها كل شيء."
+      },
+      "gallery": [],
+      "socialLinks": {
+        "instagram": "",
+        "youtube": "",
+        "linkedin": "",
+        "x": ""
+      },
+      "position": 7
+    },
+    {
+      "id": 8,
+      "number": "08",
+      "name": "Em Breve",
+      "arabicName": "قريبًا جدًا",
+      "role": {
+        "pt": "PVP",
+        "en": "Narrative and Communication",
+        "ar": "السرد والتواصل"
+      },
+      "location": {
+        "pt": "Desconhecido",
+        "en": "Jeddah, Saudi Arabia",
+        "ar": "جدة، السعودية"
+      },
+      "portrait": "/images/uploads/1784682557261-40a95b5e-web.webp",
+      "backgroundImage": "/images/ai/backdrop-02.webp",
+      "shortDescription": {
+        "pt": "",
+        "en": "She keeps the council stories and decides how each one is told. Nothing leaves here without passing through her.",
+        "ar": "تحفظ حكايات المجلس وتقرر كيف تُروى كل واحدة. لا شيء يخرج من هنا دون أن يمرّ بها."
+      },
+      "biography": {
+        "pt": "",
+        "en": "Hessa started as a neighbourhood reporter in Jeddah, covering what nobody else wanted, and learned that every story hides a more honest version beneath the first. She worked in newsrooms and documentaries before taking charge of the council narrative. She writes fast, cuts without mercy and refuses any sentence that sounds larger than the fact. She is the one who makes sure the council is remembered for what it did, not for what it announced.",
+        "ar": "بدأت حصة مراسلة أحياء في جدة، تغطي ما لا يريد أحد تغطيته، وتعلّمت أن لكل حكاية نسخة أصدق تختبئ تحت الأولى. عملت في غرف الأخبار والأفلام الوثائقية قبل أن تتولى سرد المجلس. تكتب بسرعة، وتحذف بلا رحمة، وترفض أي جملة تبدو أكبر من الواقعة. هي من تضمن أن يُذكر المجلس بما فعل، لا بما أعلن."
+      },
+      "previousPlaces": [],
+      "timeline": [
+        {
+          "year": "2016",
+          "title": {
+            "pt": "Repórter de bairro",
+            "en": "Neighbourhood reporter",
+            "ar": "مراسلة الأحياء"
+          },
+          "description": {
+            "pt": "Cobre o cotidiano de Jeddah para um jornal local.",
+            "en": "Covers everyday life in Jeddah for a local paper.",
+            "ar": "غطّت الحياة اليومية في جدة لصحيفة محلية."
+          }
+        },
+        {
+          "year": "2020",
+          "title": {
+            "pt": "Primeiro documentário",
+            "en": "First documentary",
+            "ar": "أول فيلم وثائقي"
+          },
+          "description": {
+            "pt": "Dirige um curta sobre pescadores do Mar Vermelho, premiado no Golfo.",
+            "en": "Directs a short about Red Sea fishermen, awarded across the Gulf.",
+            "ar": "أخرجت فيلمًا قصيرًا عن صيادي البحر الأحمر، نال جوائز خليجية."
+          }
+        },
+        {
+          "year": "2023",
+          "title": {
+            "pt": "A voz do conselho",
+            "en": "The council voice",
+            "ar": "صوت المجلس"
+          },
+          "description": {
+            "pt": "Assume a narrativa e reescreve toda a comunicação do grupo.",
+            "en": "Takes over the narrative and rewrites all of the group communication.",
+            "ar": "تولّت السرد وأعادت كتابة تواصل المجموعة بالكامل."
+          }
+        },
+        {
+          "year": "2026",
+          "title": {
+            "pt": "Arquivo vivo",
+            "en": "A living archive",
+            "ar": "أرشيف حيّ"
+          },
+          "description": {
+            "pt": "Abre o arquivo audiovisual do conselho ao público pela primeira vez.",
+            "en": "Opens the council film archive to the public for the first time.",
+            "ar": "فتحت أرشيف المجلس المرئي للجمهور لأول مرة."
+          }
+        }
+      ],
+      "achievements": {
+        "pt": [],
+        "en": [
+          "Short film awarded at two Gulf festivals",
+          "An archive of over two hundred hours of documented material",
+          "Behind the narrative identity of all eight profiles"
+        ],
+        "ar": [
+          "فيلم قصير حائز على جوائز في مهرجانين خليجيين",
+          "أرشيف يتجاوز مئتي ساعة من المواد الموثقة",
+          "وراء الهوية السردية للملفات الثمانية"
+        ]
+      },
+      "videoType": "x",
+      "videoUrl": "https://x.com/danikefpsss/status/1966507991743529347",
+      "videoThumbnail": "/images/member-08-video.svg",
+      "videoTitle": {
+        "pt": "A versão honesta",
+        "en": "The honest version",
+        "ar": "النسخة الصادقة"
+      },
+      "videoDescription": {
+        "pt": "Como se conta a história de oito pessoas sem inventar nenhuma delas.",
+        "en": "How you tell the story of eight people without inventing any of them.",
+        "ar": "كيف تروي حكاية ثمانية أشخاص دون أن تخترع أيًا منهم."
+      },
+      "gallery": [
+        "/images/member-08-gallery-01.svg",
+        "/images/member-08-gallery-02.svg",
+        "/images/member-08-gallery-03.svg"
+      ],
+      "socialLinks": {
+        "instagram": "https://www.instagram.com/",
+        "youtube": "",
+        "linkedin": "https://www.linkedin.com/",
+        "x": "https://x.com/"
+      },
+      "position": 8
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+node_modules
+dist
+dist-ssr
+.vite
+*.local
+.DS_Store
+.env
+.env.*
+!.env.example
+
+server/data
+server/uploads
+
+# logs do servidor de desenvolvimento (imprimem a senha do painel no boot)
+*.log
