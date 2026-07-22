@@ -68,7 +68,7 @@ export default function AccessScreen({ onEnter }) {
         <LanguageSelector />
       </div>
 
-      <AccessMusic url={access.music} />
+      <AccessMusic url={access.music} canEdit={canEdit} />
 
       {/* Os dois emblemas */}
       <motion.div
