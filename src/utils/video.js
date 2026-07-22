@@ -21,6 +21,11 @@ export function parseYouTubeId(url) {
   return match ? match[1] : null;
 }
 
+/** true se o endereço aponta para um arquivo de áudio (upload ou link direto). */
+export function isAudioFile(url) {
+  return /\.(mp3|m4a|aac|ogg|wav|weba)(\?|$)/i.test(String(url || ''));
+}
+
 /**
  * Descobre o tipo pelo próprio endereço. Serve para o editor ajustar o campo
  * "tipo" sozinho quando alguém cola um link.

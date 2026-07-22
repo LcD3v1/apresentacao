@@ -13,6 +13,7 @@ import MemberModal from './components/MemberModal';
 import VideoModal from './components/VideoModal';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import BackgroundMusic from './components/BackgroundMusic';
 import AdminBar from './components/admin/AdminBar';
 import MemberEditor from './components/admin/MemberEditor';
 
@@ -68,6 +69,9 @@ function Site() {
 
   return (
     <>
+      {/* Fora do AnimatePresence: a trilha atravessa a transição sem parar */}
+      <BackgroundMusic url={access.music} />
+
       <AnimatePresence>
         {phase === 'gate' && <AccessScreen key="access" onEnter={enter} />}
         {phase === 'transition' && (

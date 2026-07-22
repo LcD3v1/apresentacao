@@ -86,7 +86,16 @@ const ALLOWED = {
   'video/mp4': '.mp4',
   'video/webm': '.webm',
   'video/quicktime': '.mov',
+  'audio/mpeg': '.mp3',
+  'audio/mp4': '.m4a',
+  'audio/aac': '.aac',
+  'audio/ogg': '.ogg',
+  'audio/wav': '.wav',
+  'audio/x-wav': '.wav',
+  'audio/webm': '.weba',
 };
+
+const AUDIO_MIME = new Set(Object.keys(ALLOWED).filter((m) => m.startsWith('audio/')));
 
 const storage = multer.diskStorage({
   destination: (_req, _file, cb) => cb(null, uploadsDir),
@@ -223,10 +232,15 @@ app.get('/api/media', requireAuth, (_req, res) => res.json(listMedia()));
 
 app.post('/api/media', requireAuth, upload.single('file'), (req, res) => {
   if (!req.file) return res.status(400).json({ error: 'no_file' });
+  const kind = AUDIO_MIME.has(req.file.mimetype)
+    ? 'audio'
+    : req.file.mimetype.startsWith('video/')
+      ? 'video'
+      : 'image';
   const entry = recordMedia({
     id: randomUUID(),
     url: `/uploads/${req.file.filename}`,
-    kind: req.file.mimetype.startsWith('video/') ? 'video' : 'image',
+    kind,
     filename: req.file.originalname,
     size: req.file.size,
   });

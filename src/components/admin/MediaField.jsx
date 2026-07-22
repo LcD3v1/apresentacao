@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { Film, Image as ImageIcon, Link2, Loader2, Upload, X } from 'lucide-react';
+import { Film, Image as ImageIcon, Link2, Loader2, Music, Upload, X } from 'lucide-react';
 import { useContent } from '../../context/ContentContext';
 
 const PANEL_WIDTH = 288; // w-72
@@ -132,8 +132,16 @@ export default function MediaField({
     }
   };
 
-  const Icon = kind === 'video' ? Film : ImageIcon;
-  const title = label || (kind === 'video' ? 'Vídeo' : 'Imagem');
+  const Icon = kind === 'video' ? Film : kind === 'audio' ? Music : ImageIcon;
+  const title = label || (kind === 'video' ? 'Vídeo' : kind === 'audio' ? 'Áudio' : 'Imagem');
+
+  const accept = kind === 'video' ? 'video/*' : kind === 'audio' ? 'audio/*' : 'image/*';
+  const placeholderUrl =
+    kind === 'video'
+      ? 'https://…/embed/ID'
+      : kind === 'audio'
+        ? 'https://…/musica.mp3'
+        : 'https://…/foto.webp';
 
   const panel = (
     <div
@@ -183,7 +191,7 @@ export default function MediaField({
           value={url}
           onChange={(event) => setUrl(event.target.value)}
           onKeyDown={(event) => event.key === 'Enter' && handleUrl()}
-          placeholder={kind === 'video' ? 'https://…/embed/ID' : 'https://…/foto.webp'}
+          placeholder={placeholderUrl}
           className="w-full bg-transparent py-2 text-xs text-text outline-none"
         />
       </label>
@@ -232,7 +240,7 @@ export default function MediaField({
       <input
         ref={inputRef}
         type="file"
-        accept={kind === 'video' ? 'video/*' : 'image/*'}
+        accept={accept}
         className="sr-only"
         onChange={(event) => handleFile(event.target.files?.[0])}
       />

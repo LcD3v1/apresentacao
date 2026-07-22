@@ -10,8 +10,8 @@
     "server": "node server/index.js --port 3001",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "node server/index.js",
-    "deploy": "npm run build && node server/index.js",
+    "start": "node --env-file-if-exists=.env server/index.js",
+    "deploy": "npm run build && node --env-file-if-exists=.env server/index.js",
     "assets": "node scripts/generate-assets.mjs",
     "export": "node scripts/export-content.mjs",
     "optimize": "node scripts/optimize-media.mjs"

@@ -5,9 +5,9 @@ import { useContent } from '../context/ContentContext';
 import { ArabicPattern, GoldenParticles, SectionDivider } from './ArabicPattern';
 import SmartImage from './SmartImage';
 import LanguageSelector from './LanguageSelector';
-import AccessMusic from './AccessMusic';
 import EditableText from './admin/EditableText';
 import MediaField from './admin/MediaField';
+import { isAudioFile } from '../utils/video';
 
 /** Porta de entrada do site: dois emblemas, uma frase e o botão de acesso. */
 export default function AccessScreen({ onEnter }) {
@@ -67,8 +67,6 @@ export default function AccessScreen({ onEnter }) {
       <div className="absolute end-5 top-5 z-20">
         <LanguageSelector />
       </div>
-
-      <AccessMusic url={access.music} canEdit={canEdit} />
 
       {/* Os dois emblemas */}
       <motion.div
@@ -196,19 +194,30 @@ export default function AccessScreen({ onEnter }) {
         </div>
       )}
 
-      {/* Só no modo edição: link da música que toca aqui */}
+      {/* Só no modo edição: a trilha de fundo do site */}
       {canEdit && (
-        <div className="mt-4 w-full max-w-lg border border-gold/25 bg-black/70 p-3 text-start backdrop-blur">
-          <p className="text-[0.62rem] uppercase tracking-[0.2em] text-gold">Música da tela (YouTube)</p>
+        <div className="relative mt-4 w-full max-w-lg border border-gold/25 bg-black/70 p-3 text-start backdrop-blur">
+          <div className="flex items-center justify-between gap-3">
+            <p className="text-[0.62rem] uppercase tracking-[0.2em] text-gold">Trilha do site</p>
+            <MediaField
+              position="inline"
+              kind="audio"
+              value={isAudioFile(access.music) ? access.music : ''}
+              label="Arquivo de música"
+              onSave={(u) => setSiteField('access', 'music', u, { localized: false })}
+            />
+          </div>
           <EditableText
-            label="Link da música"
+            label="Link ou arquivo da música"
             value={access.music}
             onSave={(v) => setSiteField('access', 'music', v, { localized: false })}
-            className="mt-1.5 break-all text-[0.72rem] leading-relaxed text-text-muted"
-            placeholder="Cole um link do YouTube…"
+            className="mt-2 break-all text-[0.72rem] leading-relaxed text-text-muted"
+            placeholder="Envie um MP3 ou cole um link do YouTube…"
           />
           <p className="mt-1.5 text-[0.62rem] leading-relaxed text-text-muted/70">
-            Começa em silêncio e o som liga no primeiro clique. Vazio desliga a música.
+            Um <span className="text-gold-light">arquivo MP3 enviado</span> toca de forma confiável em
+            qualquer navegador. Link do YouTube funciona como reserva. A música toca no site todo,
+            começa em silêncio e o som liga no primeiro clique. Vazio desliga.
           </p>
         </div>
       )}
