@@ -2,139 +2,85 @@ import { useEffect, useRef, useState } from 'react';
 import { Music, Volume2, VolumeX } from 'lucide-react';
 import { parseYouTubeId } from '../utils/video';
 
-/**
- * Carrega a API de player do YouTube uma única vez por página.
- *
- * Usamos a API oficial em vez de mandar postMessage no iframe cru: assim os
- * comandos só saem depois que o player avisa que está pronto, e não é preciso
- * acertar o parâmetro `origin` na mão — sem ele o YouTube ignora os comandos
- * em silêncio, que foi exatamente o motivo do som não ligar antes.
- */
-let apiPromise = null;
-
-function loadYouTubeApi() {
-  if (apiPromise) return apiPromise;
-
-  apiPromise = new Promise((resolve, reject) => {
-    if (window.YT?.Player) return resolve(window.YT);
-
-    const anterior = window.onYouTubeIframeAPIReady;
-    window.onYouTubeIframeAPIReady = () => {
-      anterior?.();
-      resolve(window.YT);
-    };
-
-    const script = document.createElement('script');
-    script.src = 'https://www.youtube.com/iframe_api';
-    script.async = true;
-    script.onerror = () => reject(new Error('player do YouTube não carregou'));
-    document.head.appendChild(script);
-    return undefined;
-  });
-
-  return apiPromise;
-}
+const YT_ORIGIN = 'https://www.youtube.com';
 
 /**
  * Trilha da tela de acesso.
  *
- * Começa muda, porque nenhum navegador deixa tocar com som antes de um gesto,
- * e liga o som no primeiro clique — no botão ou em qualquer ponto da tela.
- * Some quando a tela de acesso sai.
+ * Fala direto com o iframe do embed por postMessage, sem carregar o script
+ * `youtube.com/iframe_api`. Esse script é justamente o que bloqueadores de
+ * anúncio e navegadores com proteção de privacidade barram — e era o motivo
+ * de a música falhar em alguns computadores. O embed em si raramente é
+ * bloqueado, então esta versão toca em muito mais lugares.
+ *
+ * O segredo que faltava antes: o parâmetro `origin`. Sem ele o YouTube
+ * descarta os comandos em silêncio, mesmo com `enablejsapi=1`.
+ *
+ * Começa mudo (autoplay com som é proibido antes de um gesto) e liga o som no
+ * primeiro clique, seja no botão, seja em qualquer ponto da tela.
  */
 export default function AccessMusic({ url, canEdit = false }) {
   const id = parseYouTubeId(url);
-  const containerRef = useRef(null);
-  const playerRef = useRef(null);
+  const iframeRef = useRef(null);
   const jaLigou = useRef(false);
+  const recebeuSinal = useRef(false);
 
   const [muted, setMuted] = useState(true);
-  const [estado, setEstado] = useState('carregando'); // carregando | pronto | bloqueado | erro
+  const [estado, setEstado] = useState('carregando'); // carregando | tocando | bloqueado | erro
 
-  /* ------------------------------------------------------------ player */
+  const enviar = (func, args = []) => {
+    iframeRef.current?.contentWindow?.postMessage(
+      JSON.stringify({ event: 'command', func, args }),
+      YT_ORIGIN,
+    );
+  };
+
+  const ligarSom = () => {
+    jaLigou.current = true;
+    setMuted(false);
+    enviar('unMute');
+    enviar('setVolume', [70]);
+    enviar('playVideo');
+  };
+
+  const desligarSom = () => {
+    setMuted(true);
+    enviar('mute');
+  };
+
+  /* ---------------------------------------------------- escuta o player */
 
   useEffect(() => {
     if (!id) return undefined;
 
-    let cancelado = false;
-    let player = null;
-    const container = containerRef.current;
+    const onMessage = (event) => {
+      if (event.origin !== YT_ORIGIN) return;
 
-    // A API substitui o elemento que recebe pelo iframe, então entregamos um
-    // nó criado à mão — o React continua dono só do container.
-    const alvo = document.createElement('div');
-    container?.appendChild(alvo);
-
-    loadYouTubeApi()
-      .then((YT) => {
-        if (cancelado) return;
-
-        player = new YT.Player(alvo, {
-          videoId: id,
-          playerVars: {
-            autoplay: 1,
-            mute: 1,
-            loop: 1,
-            playlist: id, // o loop exige a própria faixa como "lista"
-            controls: 0,
-            disablekb: 1,
-            modestbranding: 1,
-            playsinline: 1,
-            rel: 0,
-          },
-          events: {
-            onReady: (event) => {
-              if (cancelado) return;
-              event.target.playVideo();
-              setEstado('pronto');
-              // Se o gesto veio antes do player ficar pronto, liga agora.
-              if (jaLigou.current) {
-                event.target.unMute();
-                event.target.setVolume(70);
-                setMuted(false);
-              }
-            },
-            onError: (event) => {
-              // 101 e 150: o dono do vídeo desativou a reprodução incorporada.
-              setEstado(event.data === 101 || event.data === 150 ? 'bloqueado' : 'erro');
-            },
-          },
-        });
-
-        playerRef.current = player;
-      })
-      .catch(() => setEstado('erro'));
-
-    return () => {
-      cancelado = true;
-      try {
-        player?.destroy();
-      } catch {
-        /* já removido */
+      let data = event.data;
+      if (typeof data === 'string') {
+        try {
+          data = JSON.parse(data);
+        } catch {
+          return;
+        }
       }
-      playerRef.current = null;
-      if (container) container.innerHTML = '';
+
+      recebeuSinal.current = true;
+
+      if (data.event === 'onError') {
+        // 101 e 150: o dono do vídeo desativou a reprodução incorporada.
+        setEstado(data.info === 101 || data.info === 150 ? 'bloqueado' : 'erro');
+      } else if (data.event === 'onReady' || data.event === 'infoDelivery') {
+        setEstado((atual) => (atual === 'carregando' ? 'tocando' : atual));
+      }
     };
+
+    window.addEventListener('message', onMessage);
+    return () => window.removeEventListener('message', onMessage);
   }, [id]);
 
-  /* ------------------------------------------------------------- som */
+  /* ---------------------------------------------- primeiro gesto e falha */
 
-  const ligarSom = () => {
-    jaLigou.current = true;
-    const player = playerRef.current;
-    if (!player?.unMute) return; // ainda carregando: o onReady liga depois
-    player.unMute();
-    player.setVolume(70);
-    player.playVideo();
-    setMuted(false);
-  };
-
-  const desligarSom = () => {
-    playerRef.current?.mute?.();
-    setMuted(true);
-  };
-
-  // Primeiro gesto em qualquer lugar da tela já libera o áudio.
   useEffect(() => {
     if (!id) return undefined;
 
@@ -145,9 +91,16 @@ export default function AccessMusic({ url, canEdit = false }) {
 
     window.addEventListener('pointerdown', aoPrimeiroGesto, { once: true });
     window.addEventListener('keydown', aoPrimeiroGesto, { once: true });
+
+    // Se em 6 s o iframe não deu nenhum sinal de vida, algo o bloqueou.
+    const timer = window.setTimeout(() => {
+      if (!recebeuSinal.current) setEstado((atual) => (atual === 'carregando' ? 'erro' : atual));
+    }, 6000);
+
     return () => {
       window.removeEventListener('pointerdown', aoPrimeiroGesto);
       window.removeEventListener('keydown', aoPrimeiroGesto);
+      window.clearTimeout(timer);
     };
   }, [id]);
 
@@ -158,18 +111,35 @@ export default function AccessMusic({ url, canEdit = false }) {
   const legenda = indisponivel
     ? estado === 'bloqueado'
       ? 'Este vídeo não permite reprodução incorporada — escolha outro link.'
-      : 'A música não pôde ser carregada.'
+      : 'A música não pôde ser carregada. Uma extensão do navegador pode estar bloqueando o YouTube.'
     : muted
       ? 'Ativar som'
       : 'Silenciar';
 
+  // `origin` precisa bater com o endereço da página, aqui e no site publicado.
+  const origin = typeof window !== 'undefined' ? window.location.origin : '';
+  const src =
+    `${YT_ORIGIN}/embed/${id}?enablejsapi=1&autoplay=1&mute=1&loop=1&playlist=${id}` +
+    `&controls=0&disablekb=1&modestbranding=1&playsinline=1&rel=0&origin=${encodeURIComponent(origin)}`;
+
   return (
     <>
       {/* Tocador escondido: existe no DOM, mas não aparece */}
-      <div
-        ref={containerRef}
+      <iframe
+        ref={iframeRef}
+        src={src}
+        title="Trilha da tela de acesso"
+        allow="autoplay; encrypted-media"
+        tabIndex={-1}
         aria-hidden="true"
-        className="pointer-events-none absolute bottom-0 -z-10 h-24 w-40 overflow-hidden opacity-0"
+        onLoad={() => {
+          // Registra-se para receber os eventos do player.
+          iframeRef.current?.contentWindow?.postMessage(
+            JSON.stringify({ event: 'listening', id: 'arabia-music' }),
+            YT_ORIGIN,
+          );
+        }}
+        className="pointer-events-none absolute bottom-0 -z-10 h-24 w-40 opacity-0"
       />
 
       <button
@@ -195,7 +165,7 @@ export default function AccessMusic({ url, canEdit = false }) {
 
       {/* Só quem edita precisa saber por que a música não tocou */}
       {canEdit && indisponivel && (
-        <p className="absolute start-5 top-20 z-20 max-w-[15rem] border border-red-400/40 bg-black/80 p-2 text-[0.62rem] leading-relaxed text-red-200 backdrop-blur">
+        <p className="absolute start-5 top-20 z-20 max-w-[16rem] border border-red-400/40 bg-black/80 p-2 text-[0.62rem] leading-relaxed text-red-200 backdrop-blur">
           {legenda}
         </p>
       )}
